@@ -1,3 +1,3 @@
-- El repositorio estará organizado por semana y por tema
-- Cada carpeta representa el avance de las semanadas, cada vez q se cambie de carpeta, seria cuando se considera un cambio de tema
+- El repositorio estará organizado por mes y por ejercicio
+- Cada carpeta representa el avance de los meses, cada vez q se cambie de carpeta dentro de la de los meses, seria cuando se considera un cambio de tema
 - Elegí esa forma de organización por orden de fecha y temas dados
