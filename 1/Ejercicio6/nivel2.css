@@ -1,0 +1,64 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: white;
+}
+.espacio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+/* PRODUCTOS */
+.producto {
+    width: 140px;
+    height: 140px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    position: relative;
+}
+
+/* COLORES */
+.celeste {
+    background: #6fa8dc;
+}
+
+/* SOLO ESTOS TIENEN HOVER */
+.celeste:hover {
+    transition: 0.3s;
+    transform: scale(1.1);
+}
+
+/* ROJO CENTRAL */
+.rojo {
+    background: #f06a6a;
+    width: 250px;
+    margin-top: 110px;
+}
+
+/* ETIQUETA SALE */
+.sale {
+    position: absolute;
+    left: 10px;
+    top: -20px;
+    height: 135px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: red;
+    color: white;
+    border-radius: 6px;
+    padding: 10px 5px;
+    font-size: 12px;
+}

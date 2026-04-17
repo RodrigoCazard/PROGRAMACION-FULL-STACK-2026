@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #2f3a40;
+    color: white;
+    padding: 15px;
+    z-index: 1000;
+}
+
+main {
+    height: 400px;
+}
+
+.categorias {
+    position: sticky;
+    top: 55px;
+    background: #6fa8dc;
+    padding: 15px;
+}
+
+hr {
+    border-top: 5px dashed red;
+}
+.extra {
+    padding: 20px;
+    height: 1000px;
+}
