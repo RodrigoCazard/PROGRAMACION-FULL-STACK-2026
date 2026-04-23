@@ -1,0 +1,362 @@
+*,
+/* con ayuda de GPT descubrí que con la etqieuta before puedo "dibujas cosas" sin agregarlas al HTML, crea un "elemento invisible" antes del contenido */
+*::before,
+/* también con GPT descubrí que after sirve para afectar a todos los pseudo-elementos después del contenido, junto a before y * hacer un reset completo */
+*::after { 
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* se usa root para definir variables globales personalizadas para usar los mismos colores en este caso */
+:root {
+  --azul: #5368df;
+  --rojo: #fa5757;
+  --oscuro: #252b46;
+  --gris: #9194a1;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  font-size: 18px;
+}
+
+/* ATAJOS PARA NO REPETIR CÓDIGO */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.contenedor {
+  width: 1110px;
+  margin: auto;
+}
+
+.centrado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.texto-limitado {
+  max-width: 500px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: var(--gris);
+}
+
+/* HEADER */
+
+.header {
+  padding: 40px 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav { 
+  display: flex; 
+  gap: 40px; 
+  align-items: center; 
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 13px;
+  color: var(--oscuro);
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--rojo);
+}
+
+/* BOTONES */
+
+.btn {
+  padding: 12px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-rojo {
+  background: var(--rojo);
+  color: white;
+  padding: 10px 25px;
+}
+
+.btn-rojo:hover {
+  background: #e14b4b;
+  transform: translateY(-2px);
+  color: white;
+}
+
+.botones {
+  display: flex;
+  gap: 15px;
+}
+
+.btn-azul {
+  background: var(--azul);
+  color: white;
+}
+
+.btn-azul:hover {
+  background: #3f53d9;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px var(--gris);
+}
+
+.btn-gris {
+  background: #eee;
+}
+
+.btn-gris:hover {
+  background: #ddd;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px var(--gris);
+}
+
+/* MAIN */
+
+/* HERO */
+
+.hero {
+  display: flex;
+  align-items: center;
+  margin-top: 80px;
+  gap: 40px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  color: var(--oscuro);
+  margin-bottom: 20px;
+}
+
+.hero-img {
+  position: relative;
+}
+
+.hero-img::before {
+  content: "";
+  position: absolute;
+  right: -200px;
+  bottom: -80px;
+  width: 500px;
+  height: 350px;
+  background: var(--azul);
+  border-radius: 250px 0 0 250px;
+  z-index: -1;
+}
+
+/* FEATURES */
+.features {
+  margin: 150px 0 80px;
+}
+
+.apartados {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  border-bottom: 1px solid #ddd;
+}
+
+.apartados span {
+  padding: 20px 40px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.apartados span:hover {
+  color: var(--rojo);
+}
+
+.apartados .activo {
+  border-bottom: 3px solid var(--rojo);
+}
+
+/* DETALLE FEATURE */
+.feature-detalles {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+.feature-detalles .imagen {
+  position: relative;
+}
+
+.feature-detalles .imagen::before {
+  content: "";
+  position: absolute;
+  left: -200px;
+  bottom: -60px;
+  width: 500px;
+  height: 350px;
+  background: var(--azul);
+  border-radius: 0 250px 250px 0;
+  z-index: -1;
+}
+
+/* DOWNLOAD */
+.download {
+  margin-top: 150px;
+}
+
+.fila {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  margin-top: 60px;
+}
+
+/* TARJETAS */
+.tarjeta {
+  width: 280px;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px var(--gris);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.tarjeta {
+  transition: all 0.3s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px var(--gris);
+}
+
+.tarjeta img {
+  margin: 0 auto 20px;
+}
+
+.tarjeta h4 {
+  margin-top: 20px;
+}
+
+.tarjeta p {
+  margin: 10px 0 20px;
+  padding-bottom: 20px;
+  border-bottom: 4px dotted #ddd;
+  color: var(--gris);
+}
+
+.t-1 {
+  margin-top: 0;
+}
+
+.t-2 {
+  margin-top: 40px;
+}
+
+.t-3 {
+  margin-top: 80px;
+}
+
+/* PREGUNTAS */
+.preguntas {
+  max-width: 540px;
+  margin: 150px auto;
+  text-align: center;
+}
+
+.preguntas h2 {
+  margin-bottom: 20px;
+}
+
+.caja-preguntas {
+  margin-bottom: 40px;
+}
+
+.pregunta {
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+  cursor: pointer;
+}
+
+.preguntas .btn {
+  margin-top: 40px;
+}
+
+/* STAY UP-TO-DATE */
+.up-to-date {
+  background: var(--azul);
+  color: white;
+  text-align: center;
+  padding: 80px 0;
+}
+
+.up-to-date p {
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.up-to-date form {
+  margin-top: 30px;
+}
+
+.up-to-date input {
+  padding: 12px;
+  width: 300px;
+  border-radius: 5px;
+  border: none;
+  margin-right: 10px;
+}
+
+.up-to-date button {
+  background: var(--rojo);
+  color: white;
+}
+
+/* FOOTER */
+.footer {
+  background: #1e2139;
+  padding: 30px 0;
+}
+
+.footer-contenido {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-division {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.footer-redes {
+  display: flex;
+  gap: 20px;
+  margin-left: 20px;
+  transition: 0.3s;
+}
+
+.footer-redes img:hover {
+  transform: scale(1.2);
+}

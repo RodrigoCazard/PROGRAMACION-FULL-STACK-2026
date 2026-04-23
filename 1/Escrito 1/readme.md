@@ -1,0 +1,4 @@
+Trabajo realizado por Emiliano Sánchez.
+Página elegida: https://www.frontendmentor.io/challenges/bookmark-landing-page-5d0b588a9edda32581d29158
+Resolución: 1920x1080 (no sé bien la verdad)
+Aclaraciones: El uso de la IA es evidente por las funciones agregadas (no dadas en clase), quería aclarar que todo el uso de la misma fue de apoyo, la usé para tomar guías e ir mejorando el código, espero que en la defensa me deje demostrarlo, cualquier duda o disgusto por el uso me gustaría que me lo pudiera decir antes de evaluarlo como finalizado, más que nada porque sé que puedo defender lo trabajado, gracias.
