@@ -28,8 +28,9 @@ img {
 }
 
 .contenedor {
-  width: 1110px;
-  margin: auto;
+  max-width: 1110px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .centrado {
@@ -128,6 +129,7 @@ nav a:hover {
 /* HERO */
 
 .hero {
+  overflow: hidden;
   display: flex;
   align-items: center;
   margin-top: 80px;
@@ -196,7 +198,7 @@ nav a:hover {
 .feature-detalles .imagen::before {
   content: "";
   position: absolute;
-  left: -200px;
+  left: -100px;
   bottom: -60px;
   width: 500px;
   height: 350px;
@@ -327,7 +329,7 @@ nav a:hover {
 }
 
 /* FOOTER */
-.footer {
+.footer {;
   background: #1e2139;
   padding: 30px 0;
 }
@@ -359,4 +361,114 @@ nav a:hover {
 
 .footer-redes img:hover {
   transform: scale(1.2);
+}
+
+/* Tablet */
+
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .feature-detalles {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .fila {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tarjeta {
+    width: 250px;
+  }
+
+  .t-1, .t-2, .t-3 {
+    margin-top: 0;
+  }
+}
+
+
+
+/* Celular */
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .feature-detalles {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .fila {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tarjeta {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .t-1, .t-2, .t-3 {
+    margin-top: 0;
+  }
+
+  .up-to-date form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .up-to-date input, .up-to-date button {
+    width: 100%;
+  }
+
+  .footer-contenido {
+    flex-direction: column;
+    gap: 20px;
+  }
+}  
+
+/* Celular chico */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  .features {
+    margin: 80px 0;
+  }
+
+  .preguntas {
+    margin: 80px auto;
+  }
+
+  .apartados {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
