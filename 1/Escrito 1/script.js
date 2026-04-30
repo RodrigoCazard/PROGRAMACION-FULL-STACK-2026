@@ -1,15 +1,3 @@
-document.querySelectorAll('.tab-item').forEach(tab => {
-    tab.addEventListener('click', function() {
-        // Quitar activo de todos
-        document.querySelectorAll('.tab-item').forEach(t => t.classList.remove('activo'));
-        // Poner activo al actual
-        this.classList.add('activo');
-        
-        console.log("Cambiando a pestaña " + this.dataset.tab);
-        // Aquí podrías cambiar el texto e imagen del feature-content
-    });
-});
-
 // 1. Datos de los apartados
 const featureData = {
     "1": {

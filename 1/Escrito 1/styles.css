@@ -149,12 +149,6 @@ body {
 }
 
 @media (min-width: 768px) {
-    .t-1 { margin-top: 0; }
-    .t-2 { margin-top: 40px; }
-    .t-3 { margin-top: 80px; }
-}
-
-@media (min-width: 768px) {
     .t-2 { margin-top: 40px; }
     .t-3 { margin-top: 80px; }
 }
