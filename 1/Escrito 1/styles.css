@@ -5,6 +5,12 @@
   --gris: #a2a4af;
 }
 
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  position: relative;
+}
+
 body {
   font-family: 'Rubik', sans-serif;
   overflow-x: hidden; /* Evita scroll horizontal por los fondos */
@@ -55,65 +61,65 @@ body {
 }
 
 .btn-gris {
-    background: rgb(223, 223, 223);
-    color: black;
-    letter-spacing: 1px;
-    font-size: 13px;
-    border: none;
-    padding: 12px 25px;
-    transition: all 0.3s ease-in-out;
+  background: rgb(223, 223, 223);
+  color: black;
+  letter-spacing: 1px;
+  font-size: 13px;
+  border: none;
+  padding: 12px 25px;
+  transition: all 0.3s ease-in-out;
 }
 
 .btn-gris:hover {
-    background: rgb(223, 223, 223);
-    color: black;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+  background: rgb(223, 223, 223);
+  color: black;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
 }
 
 /* FONDOS AZULES (Pseudo-elementos) */
 .hero-img-container, .feature-img-container {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
 
 /* Forma azul del Hero */
 .hero-img-container::after {
-    content: "";
-    position: absolute;
-    background: var(--azul);
-    width: 100%;
-    height: 80%;
-    right: -20%;
-    bottom: -10%;
-    z-index: -1;
-    border-radius: 250px 0 0 250px;
+  content: "";
+  position: absolute;
+  background: var(--azul);
+  width: 100%;
+  height: 80%;
+  right: -20%;
+  bottom: -10%;
+  z-index: -1;
+  border-radius: 250px 0 0 250px;
 }
 
 /* Forma azul de Features */
 .feature-img-container::after {
-    content: "";
-    position: absolute;
-    background: var(--azul);
-    width: 100%;
-    height: 80%;
-    left: -20%;
-    bottom: -10%;
-    z-index: -1;
-    border-radius: 0 250px 250px 0;
+  content: "";
+  position: absolute;
+  background: var(--azul);
+  width: 100%;
+  height: 80%;
+  left: -20%;
+  bottom: -10%;
+  z-index: -1;
+  border-radius: 0 250px 250px 0;
 }
 
 #feature-content {
-    transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 
 /* TABS / APARTADOS */
 .tab-item {
-    padding: 20px 40px;
-    border-bottom: 1px solid #eee;
-    cursor: pointer;
-    color: var(--gris);
-    transition: 0.3s;
+  padding: 20px 40px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  color: var(--gris);
+  transition: 0.3s;
 }
 
 .tab-item:hover { 
@@ -121,49 +127,68 @@ body {
 }
 
 .tab-item.activo {
-    color: var(--oscuro);
-    border-bottom: 4px solid var(--rojo);
+  color: var(--oscuro);
+  border-bottom: 4px solid var(--rojo);
 }
 
 /* TARJETAS DOWNLOAD */
 .tarjeta {
-    background: white;
-    padding: 40px 25px;
-    border-radius: 15px;
-    border: none;
-    box-shadow: 0 10px 30px rgba(37, 43, 70, 0.08), 
-                0 5px 15px rgba(0, 0, 0, 0.05);
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); /* Animación de suavizado profesional */
+  background: white;
+  padding: 40px 25px;
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0 10px 30px rgba(37, 43, 70, 0.08), 
+              0 5px 15px rgba(0, 0, 0, 0.05);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); /* Animación de suavizado profesional */
 }
 
 .tarjeta:hover {
-    transform: translateY(-10px);
+  transform: translateY(-10px);
 
-    box-shadow: 0 30px 60px rgba(37, 43, 70, 0.15), 
-                0 15px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 30px 60px rgba(37, 43, 70, 0.15), 
+              0 15px 25px rgba(0, 0, 0, 0.1);
 }
 
 @media (min-width: 768px) {
-    .t-2 { margin-top: 40px; }
-    .t-3 { margin-top: 80px; }
+  .hero-img-container::after {
+      right: -10%; /* Lo acercamos más al borde para que no empuje la pantalla */
+      width: 100%;
+      height: 70%;
+      border-radius: 150px 0 0 150px; /* Redondeado más pequeño para móviles */
+    }
+
+    .feature-img-container::after {
+      left: -10%; /* Lo mismo para la forma de la izquierda */
+      width: 100%;
+      height: 70%;
+      border-radius: 0 150px 150px 0;
+    }
+    
+    /* Evita que las secciones tengan márgenes que empujen hacia afuera */
+    .row {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  .t-2 { margin-top: 40px; }
+  .t-3 { margin-top: 80px; }
 }
 
 .tarjeta p {
-    border-bottom: 4px dotted #eee;
-    width: 100%;
-    padding-bottom: 25px;
-    margin-bottom: 15px;
+  border-bottom: 4px dotted #eee;
+  width: 100%;
+  padding-bottom: 25px;
+  margin-bottom: 15px;
 }
 
 .tarjeta .btn-azul {
-    width: 100%;
-    margin-top: auto;
-    font-weight: 500;
+  width: 100%;
+  margin-top: auto;
+  font-weight: 500;
 }
 
 .up-to-date {
@@ -173,54 +198,54 @@ body {
 
 /* Contenedor del input para manejar el error */
 .input-group-container {
-    position: relative;
-    border-radius: 5px;
-    transition: all 0.3s;
+  position: relative;
+  border-radius: 5px;
+  transition: all 0.3s;
 }
 
 /* Estilo del mensaje de error (oculto por defecto) */
 .error-text {
-    display: none;
-    background: var(--rojo);
-    color: white;
-    font-size: 12px;
-    font-style: italic;
-    text-align: left;
-    padding: 5px 12px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    width: 100%;
+  display: none;
+  background: var(--rojo);
+  color: white;
+  font-size: 12px;
+  font-style: italic;
+  text-align: left;
+  padding: 5px 12px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  width: 100%;
 }
 
 /* Clase que aplicaremos con JavaScript cuando haya un error */
 .input-error .form-control {
-    border: 2px solid var(--rojo) !important;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+  border: 2px solid var(--rojo) !important;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .input-error .error-text {
-    display: block;
+  display: block;
 }
 
 .letter-spacing-2 {
-    letter-spacing: 4px;
-    font-size: 13px;
+  letter-spacing: 4px;
+  font-size: 13px;
 }
 
 .accordion-button:not(.collapsed) {
-    background-color: transparent;
-    color: var(--rojo);
-    box-shadow: none;
+  background-color: transparent;
+  color: var(--rojo);
+  box-shadow: none;
 }
 
 .accordion-button:focus {
-    box-shadow: none;
-    border-color: rgba(0,0,0,.125);
+  box-shadow: none;
+  border-color: rgba(0,0,0,.125);
 }
 
 .accordion-button::after {
-    filter: sepia(100%) hue-rotate(190deg) saturate(500%); /* Cambia el color de la flecha a azul */
+  filter: sepia(100%) hue-rotate(190deg) saturate(500%); /* Cambia el color de la flecha a azul */
 }
 
 /* FOOTER */

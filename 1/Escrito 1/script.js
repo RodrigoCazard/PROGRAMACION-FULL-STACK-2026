@@ -3,17 +3,17 @@ const featureData = {
     "1": {
         title: "Bookmark in one click",
         desc: "Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.",
-        img: "img/illustration-features-tab-1.svg"
+        img: "./img/illustration-features-tab-1.svg"
     },
     "2": {
         title: "Intelligent search",
         desc: "Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.",
-        img: "img/illustration-features-tab-2.svg"
+        img: "./img/illustration-features-tab-2.svg"
     },
     "3": {
         title: "Share your bookmarks",
         desc: "Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.",
-        img: "img/illustration-features-tab-3.svg"
+        img: "./img/illustration-features-tab-3.svg"
     }
 };
 
@@ -72,7 +72,7 @@ form.addEventListener('submit', (e) => {
     } else {
         // Si es válido, lo quitamos y podrías enviar los datos
         errorContainer.classList.remove('input-error');
-        alert('¡Gracias por suscribirte!');
+        alert('¡Gracias por contactarnos!');
         emailInput.value = ''; // Limpiamos el campo
     }
 });
