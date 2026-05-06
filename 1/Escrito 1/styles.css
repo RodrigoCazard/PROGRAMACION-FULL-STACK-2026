@@ -1,32 +1,25 @@
-*,
-/* con ayuda de GPT descubrí que con la etqieuta before puedo "dibujas cosas" sin agregarlas al HTML, crea un "elemento invisible" antes del contenido */
-*::before,
-/* también con GPT descubrí que after sirve para afectar a todos los pseudo-elementos después del contenido, junto a before y * hacer un reset completo */
-*::after { 
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-/* se usa root para definir variables globales personalizadas para usar los mismos colores en este caso */
 :root {
   --azul: #5368df;
   --rojo: #fa5757;
   --oscuro: #252b46;
-  --gris: #9194a1;
+  --gris: #a2a4af;
+}
+
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  position: relative;
 }
 
 body {
   font-family: 'Rubik', sans-serif;
-  font-size: 18px;
 }
 
-/* ATAJOS PARA NO REPETIR CÓDIGO */
-img {
-  display: block;
-  max-width: 100%;
+.max-600 { 
+  max-width: 600px; 
 }
 
+<<<<<<< HEAD
 .contenedor {
   max-width: 1110px;
   width: 100%;
@@ -74,56 +67,66 @@ nav a {
 
 nav a:hover {
   color: var(--rojo);
+=======
+.texto-limitado { 
+  color: var(--gris); 
+  margin-bottom: 25px; 
+>>>>>>> b29ef5061557c4417f7108afcb6d980d94c4119f
 }
 
 /* BOTONES */
-
-.btn {
-  padding: 12px 20px;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  transition: 0.3s;
+.btn-azul { 
+  background: var(--azul); 
+  color: white; 
+  border: none; 
+  letter-spacing: 1px;
+  font-size: 13px;
+  padding: 12px 25px; 
+  transition: all 0.3s ease-in-out;
 }
 
-.btn-rojo {
+.btn-azul:hover { 
+  background: #3f53d9; 
+  color: white; 
+  transform: translateY(-2px); 
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+.btn-rojo { 
   background: var(--rojo);
-  color: white;
-  padding: 10px 25px;
+  color: white; 
+  border: none; 
+  letter-spacing: 1px; 
+  font-size: 13px; 
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+  transition: all 0.3s ease-in-out;
 }
 
-.btn-rojo:hover {
-  background: #e14b4b;
+.btn-rojo:hover { 
+  background: #e14b4b; 
+  color: white; 
   transform: translateY(-2px);
-  color: white;
-}
-
-.botones {
-  display: flex;
-  gap: 15px;
-}
-
-.btn-azul {
-  background: var(--azul);
-  color: white;
-}
-
-.btn-azul:hover {
-  background: #3f53d9;
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px var(--gris);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
 }
 
 .btn-gris {
-  background: #eee;
+  background: rgb(223, 223, 223);
+  color: black;
+  letter-spacing: 1px;
+  font-size: 13px;
+  border: none;
+  padding: 12px 25px;
+  transition: all 0.3s ease-in-out;
 }
 
 .btn-gris:hover {
-  background: #ddd;
+  background: rgb(223, 223, 223);
+  color: black;
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px var(--gris);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
 }
 
+<<<<<<< HEAD
 /* MAIN */
 
 /* HERO */
@@ -143,47 +146,63 @@ nav a:hover {
 }
 
 .hero-img {
+=======
+/* FONDOS AZULES (Pseudo-elementos) */
+.hero-img-container, .feature-img-container {
+>>>>>>> b29ef5061557c4417f7108afcb6d980d94c4119f
   position: relative;
+  z-index: 1;
 }
 
-.hero-img::before {
+/* Forma azul del Hero */
+.hero-img-container::after {
   content: "";
   position: absolute;
-  right: -200px;
-  bottom: -80px;
-  width: 500px;
-  height: 350px;
   background: var(--azul);
-  border-radius: 250px 0 0 250px;
+  width: 100%;
+  height: 80%;
+  right: -20%;
+  bottom: -10%;
   z-index: -1;
+  border-radius: 250px 0 0 250px;
 }
 
-/* FEATURES */
-.features {
-  margin: 150px 0 80px;
+/* Forma azul de Features */
+.feature-img-container::after {
+  content: "";
+  position: absolute;
+  background: var(--azul);
+  width: 100%;
+  height: 80%;
+  left: -20%;
+  bottom: -10%;
+  z-index: -1;
+  border-radius: 0 250px 250px 0;
 }
 
-.apartados {
-  display: flex;
-  justify-content: center;
-  margin-top: 40px;
-  border-bottom: 1px solid #ddd;
+#feature-content {
+  transition: opacity 0.3s ease-in-out;
 }
 
-.apartados span {
+/* TABS / APARTADOS */
+.tab-item {
   padding: 20px 40px;
+  border-bottom: 1px solid #eee;
   cursor: pointer;
+  color: var(--gris);
   transition: 0.3s;
 }
 
-.apartados span:hover {
-  color: var(--rojo);
+.tab-item:hover { 
+  color: var(--rojo); 
 }
 
-.apartados .activo {
-  border-bottom: 3px solid var(--rojo);
+.tab-item.activo {
+  color: var(--oscuro);
+  border-bottom: 4px solid var(--rojo);
 }
 
+<<<<<<< HEAD
 /* DETALLE FEATURE */
 .feature-detalles {
   display: flex;
@@ -221,131 +240,185 @@ nav a:hover {
 }
 
 /* TARJETAS */
+=======
+/* TARJETAS DOWNLOAD */
+>>>>>>> b29ef5061557c4417f7108afcb6d980d94c4119f
 .tarjeta {
-  width: 280px;
-  padding: 40px 20px;
+  background: white;
+  padding: 40px 25px;
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0 10px 30px rgba(37, 43, 70, 0.08), 
+              0 5px 15px rgba(0, 0, 0, 0.05);
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 10px 25px var(--gris);
+  align-items: center;
   text-align: center;
-  transition: 0.3s;
-}
-
-.tarjeta {
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); /* Animación de suavizado profesional */
 }
 
 .tarjeta:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 35px var(--gris);
+
+  box-shadow: 0 30px 60px rgba(37, 43, 70, 0.15), 
+              0 15px 25px rgba(0, 0, 0, 0.1);
 }
 
-.tarjeta img {
-  margin: 0 auto 20px;
-}
+@media (min-width: 768px) {
+  .hero-img-container::after {
+      right: -10%;
+      width: 100%;
+      height: 70%;
+      border-radius: 150px 0 0 150px;
+    }
 
-.tarjeta h4 {
-  margin-top: 20px;
+    .feature-img-container::after {
+      left: -10%;
+      width: 100%;
+      height: 70%;
+      border-radius: 0 150px 150px 0;
+    }
+    
+    /* Evita que las secciones tengan márgenes que empujen hacia afuera */
+    .row {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  .t-2 { margin-top: 40px; }
+  .t-3 { margin-top: 80px; }
 }
 
 .tarjeta p {
-  margin: 10px 0 20px;
-  padding-bottom: 20px;
-  border-bottom: 4px dotted #ddd;
-  color: var(--gris);
+  border-bottom: 4px dotted #eee;
+  width: 100%;
+  padding-bottom: 25px;
+  margin-bottom: 15px;
 }
 
-.t-1 {
-  margin-top: 0;
+.tarjeta .btn-azul {
+  width: 100%;
+  margin-top: auto;
+  font-weight: 500;
 }
 
-.t-2 {
-  margin-top: 40px;
-}
-
-.t-3 {
-  margin-top: 80px;
-}
-
-/* PREGUNTAS */
-.preguntas {
-  max-width: 540px;
-  margin: 150px auto;
-  text-align: center;
-}
-
-.preguntas h2 {
-  margin-bottom: 20px;
-}
-
-.caja-preguntas {
-  margin-bottom: 40px;
-}
-
-.pregunta {
-  padding: 20px;
-  border-bottom: 1px solid #ddd;
-  text-align: left;
-  cursor: pointer;
-}
-
-.preguntas .btn {
-  margin-top: 40px;
-}
-
-/* STAY UP-TO-DATE */
 .up-to-date {
+  margin-top: 0;
   background: var(--azul);
-  color: white;
-  text-align: center;
-  padding: 80px 0;
 }
 
-.up-to-date p {
-  font-size: 14px;
-  letter-spacing: 2px;
-  margin-bottom: 20px;
-}
-
-.up-to-date form {
-  margin-top: 30px;
-}
-
-.up-to-date input {
-  padding: 12px;
-  width: 300px;
+/* Contenedor del input para manejar el error */
+.input-group-container {
+  position: relative;
   border-radius: 5px;
-  border: none;
-  margin-right: 10px;
+  transition: all 0.3s;
 }
 
-.up-to-date button {
+/* Estilo del mensaje de error (oculto por defecto) */
+.error-text {
+  display: none;
   background: var(--rojo);
   color: white;
+  font-size: 12px;
+  font-style: italic;
+  text-align: left;
+  padding: 5px 12px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  width: 100%;
+}
+
+/* Clase que aplicaremos con JavaScript cuando haya un error */
+.input-error .form-control {
+  border: 2px solid var(--rojo) !important;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.input-error .error-text {
+  display: block;
+}
+
+.letter-spacing-2 {
+  letter-spacing: 4px;
+  font-size: 13px;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: transparent;
+  color: var(--rojo);
+  box-shadow: none;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+  border-color: rgba(0,0,0,.125);
+}
+
+.accordion-button::after {
+  filter: sepia(100%) hue-rotate(190deg) saturate(500%); /* Cambia el color de la flecha a azul */
+}
+
+/* Personalización del Modal */
+
+/* Para que el modal se vea por encima de todo */
+.modal {
+    z-index: 1060;
+}
+
+.modal .btn-azul {
+    padding: 10px;
+    font-weight: 500;
+}
+.modal-content {
+  border-radius: 20px;
+  background-color: #fff;
+}
+
+.filter-blue {
+  /* Esto cambia el logo a color azul si es un SVG */
+  filter: invert(41%) sepia(82%) saturate(601%) hue-rotate(192deg) brightness(92%) contrast(92%);
+}
+
+.modal-body h3 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 24px;
+}
+
+/* Animación suave al aparecer */
+.modal.fade .modal-dialog {
+  transform: scale(0.8);
+  transition: transform 0.3s ease-out;
+}
+
+.modal.show .modal-dialog {
+  transform: scale(1);
 }
 
 /* FOOTER */
+<<<<<<< HEAD
 .footer {;
   background: #1e2139;
   padding: 30px 0;
+=======
+.footer { 
+  background: var(--oscuro); 
+  padding: 40px 0; 
+>>>>>>> b29ef5061557c4417f7108afcb6d980d94c4119f
 }
 
-.footer-contenido {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.footer-links a { 
+  color: white; 
+  text-decoration: none; 
+  font-size: 13px; 
+  letter-spacing: 1px; 
 }
 
-.footer-division {
-  display: flex;
-  gap: 40px;
-  align-items: center;
+.footer-links a:hover { 
+  color: var(--rojo); 
 }
 
+<<<<<<< HEAD
 .footer-links a {
   color: white;
   text-decoration: none;
@@ -471,4 +544,8 @@ nav a:hover {
     flex-direction: column;
     gap: 20px;
   }
+=======
+.filter-white { 
+  filter: brightness(0) invert(1); 
+>>>>>>> b29ef5061557c4417f7108afcb6d980d94c4119f
 }

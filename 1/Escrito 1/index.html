@@ -3,14 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>Bookmark</title>
+=======
+    <title>Bookmark Landing Page</title>
+>>>>>>> b29ef5061557c4417f7108afcb6d980d94c4119f
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+<<<<<<< HEAD
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <!-- HEADER -->
     <header class="header">
@@ -39,120 +45,226 @@
                     <button class="btn btn-azul">Get it on Chrome</button>
                     <button class="btn btn-gris">Get it on Firefox</button>
                 </div>
-            </div>
+=======
 
-            <div class="hero-img">
-                <img src="img/illustration-hero.svg" alt="Ilustración principal">
+<!-- HEADER (Navbar de Bootstrap) -->
+    <nav class="navbar navbar-expand-lg py-4">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="img/logo-bookmark.svg" alt="Logo Bookmark">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto gap-lg-4 align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="#">FEATURES</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">PRICING</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">CONTACT</a></li>
+                    <li class="nav-item"><a class="btn btn-rojo px-4" href="#">LOGIN</a></li>
+                </ul>
+>>>>>>> b29ef5061557c4417f7108afcb6d980d94c4119f
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- HERO -->
+        <section class="hero container my-5 py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-2 order-lg-1 text-center text-lg-start">
+                    <h1 class="display-4 fw-medium">A Simple Bookmark Manager</h1>
+                    <p class="texto-limitado mx-auto mx-lg-0">A clean and simple interface to organize your favourite websites.</p>
+                    <div class="d-flex gap-3 justify-content-center justify-content-lg-start">
+                        <button class="btn btn-azul shadow">Get it on Chrome</button>
+                        <button class="btn btn-gris shadow">Get it on Firefox</button>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-1 order-lg-2 mb-5 mb-lg-0 hero-img-container">
+                    <img src="img/illustration-hero.svg" alt="Hero" class="img-fluid">
+                </div>
             </div>
         </section>
 
         <!-- FEATURES -->
-        <section class="features">
-            <div class="contenedor centrado">
+        <section class="container text-center my-5">
+            <div class="max-600 mx-auto">
                 <h2>Features</h2>
-                <p class="texto-limitado">Our aim is to make it quick and easy for you to access your favourite websites.</p>
+                <p class="text-muted">Our aim is to make it quick and easy for you to access your favourite websites.</p>
+            </div>
+            
+            <!-- Tabs (Preparadas para JS) -->
+            <div class="apartados d-flex flex-column flex-md-row justify-content-center mt-5">
+                <span class="tab-item activo" data-tab="1">Simple Bookmarking</span>
+                <span class="tab-item" data-tab="2">Speedy Searching</span>
+                <span class="tab-item" data-tab="3">Easy Sharing</span>
+            </div>
 
-                <div class="apartados">
-                    <span class="activo">Simple Bookmarking</span>
-                    <span>Speedy Searching</span>
-                    <span>Easy Sharing</span>
+            <div id="feature-content" class="row align-items-center mt-5 py-5">
+                <div class="col-lg-6 feature-img-container">
+                    <img src="img/illustration-features-tab-1.svg" alt="Feature" class="img-fluid">
                 </div>
-            </div>
-        </section>
-
-        <!-- FEATURE DETALLES -->
-        <section class="feature-detalles contenedor">
-            <div class="imagen">
-                <img src="img/illustration-features-tab-1.svg" alt="Feature 1">
-            </div>
-
-            <div>
-                <h3>Bookmark in one click</h3>
-                <p class="texto-limitado">Organize your bookmarks however you like.</p>
-                <button class="btn btn-azul">More Info</button>
+                <div class="col-lg-6 text-center text-lg-start mt-5 mt-lg-0">
+                    <h3 class="h2">Bookmark in one click</h3>
+                    <p class="text-muted texto-limitado mx-auto mx-lg-0">Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
+                    <button class="btn btn-azul mt-3">More Info</button>
+                </div>
             </div>
         </section>
 
         <!-- DOWNLOAD -->
-        <section class="download">
-            <div class="contenedor centrado">
-
+        <section class="container my-5 py-5 text-center">
+            <div class="max-600 mx-auto">
                 <h2>Download the extension</h2>
-                <p class="texto-limitado">We’ve got more browsers in the pipeline.</p>
-
-                <div class="fila">
-
+                <p class="text-muted">We’ve got more browsers in the pipeline. Please do let us know if you’ve got a favourite you’d like us to prioritize.</p>
+            </div>
+            <div class="row mt-5 g-4 justify-content-center">
+                <div class="col-md-4 col-lg-3">
                     <div class="tarjeta t-1">
                         <img src="img/logo-chrome.svg" alt="Chrome">
                         <h4>Add to Chrome</h4>
                         <p>Minimum version 62</p>
-                        <button class="btn btn-azul">Add & Install Extension</button>
+                        <button class="btn btn-azul w-100 mt-auto">Add & Install Extension</button>
                     </div>
-
+                </div>
+                <div class="col-md-4 col-lg-3">
                     <div class="tarjeta t-2">
                         <img src="img/logo-firefox.svg" alt="Firefox">
                         <h4>Add to Firefox</h4>
                         <p>Minimum version 55</p>
-                        <button class="btn btn-azul">Add & Install Extension</button>
+                        <button class="btn btn-azul w-100 mt-auto">Add & Install Extension</button>
                     </div>
-
+                </div>
+                <div class="col-md-4 col-lg-3">
                     <div class="tarjeta t-3">
                         <img src="img/logo-opera.svg" alt="Opera">
                         <h4>Add to Opera</h4>
                         <p>Minimum version 46</p>
-                        <button class="btn btn-azul">Add & Install Extension</button>
+                        <button class="btn btn-azul w-100 mt-auto">Add & Install Extension</button>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- PREGUNTAS -->
-        <section class="preguntas">
-            <h2>Frequently Asked Questions</h2>
-            <p class="texto-limitado">Here are some of our FAQs. If you have any other questions you’d like answered please feel free to email us.</p>
-
-            <div class="caja-preguntas">
-                <div class="pregunta">What is Bookmark?</div>
-                <div class="pregunta">How can I request a new browser?</div>
-                <div class="pregunta">Is there a mobile app?</div>
-                <div class="pregunta">What about other Chromium browsers?</div>
+        <!-- PREGUNTAS (Accordion de Bootstrap) -->
+        <section class="container my-5 py-5">
+            <div class="max-600 mx-auto text-center">
+                <h2>Frequently Asked Questions</h2>
+                <p class="text-muted">Here are some of our FAQs. If you have any other questions you’d like answered please feel free to email us.</p>
             </div>
 
-            <button class="btn btn-azul">More Info</button>
+            <div class="accordion accordion-flush max-600 mx-auto mt-5" id="accordionFAQ">
+                <!-- Pregunta 1 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                            What is Bookmark?
+                        </button>
+                    </h2>
+                    <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt justo eget ultricies fringilla. Phasellus est ipsum, laoreet a tempus cursus, rhoncus quis mauris.
+                        </div>
+                    </div>
+                </div>
+                <!-- Pregunta 2 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                            How can I request a new browser?
+                        </button>
+                    </h2>
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body">
+                            Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">Is there a mobile app?</button>
+                    </h2>
+                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body">
+                            Yes, our mobile app is available for both iOS and Android. You can sync your bookmarks across all your devices seamlessly.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">What about other Chromium browsers?</button>
+                    </h2>
+                    <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body">
+                            Our extension is compatible with any Chromium-based browser, including Edge, Brave, and Vivaldi.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <button class="btn btn-azul">More Info</button>
+            </div>
         </section>
 
         <!-- STAY UP-TO-DATE -->
-        <section class="up-to-date">
-            <p>35,000+ ALREADY JOINED</p>
-            <h2>Stay up-to-date with what we’re doing</h2>
+        <section class="up-to-date py-5">
+            <div class="container text-center max-600">
+                <p class="text-uppercase fw-medium letter-spacing-2 text-white">35,000+ already joined</p>
+                <h2 class="text-white h1 mb-4">Stay up-to-date with what we’re doing</h2>
+                
+                <form id="contactForm" class="row g-3 justify-content-center mt-4" novalidate>
+                    <div class="col-md-8 position-relative">
+                        <!-- Contenedor para el input y el mensaje de error -->
+                        <div class="input-group-container">
+                            <input type="email" id="emailInput" class="form-control py-2" placeholder="Enter your email address">
+                            <span id="errorMessage" class="error-text">Asegurate que sea una email válido.</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <button type="submit" class="btn btn-rojo w-100 py-2">Contact Us</button>
+                    </div>
+                </form>
+            </div>
 
-            <form>
-                <input type="email" id="email" required placeholder="Enter your email address">
-                <button class="btn btn-rojo">Contact Us</button>
-            </form>
+            <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content border-0 shadow-lg">
+                        <div class="modal-body text-center p-5">
+                            <!-- Ícono decorativo -->
+                            <div class="icon-box mb-4">
+                                <img src="img/logo-bookmark.svg" alt="Success" class="filter-blue" style="width: 80px;">
+                            </div>
+                            <h3 class="fw-bold mb-3" style="color: var(--oscuro);">¡Te has unido con éxito!</h3>
+                            <p class="text-muted">Pronto recibirás nuestras últimas novedades sobre Bookmark directamente en tu correo.</p>
+                            <button type="button" class="btn btn-azul w-100 mt-4 py-2" data-bs-dismiss="modal">Genial, gracias</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
-
     </main>
 
+    <!-- FOOTER -->
     <footer class="footer">
-        <div class="contenedor footer-contenido">
-            
-            <div class="footer-division">
-                <img src="img/logo-bookmark.svg" alt="Logo">
-
-                <div class="footer-links">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+            <div class="d-flex flex-column flex-md-row align-items-center gap-4">
+                <img src="img/logo-bookmark.svg" alt="Logo" class="filter-white">
+                <div class="footer-links d-flex gap-4">
                     <a href="#">FEATURES</a>
                     <a href="#">PRICING</a>
                     <a href="#">CONTACT</a>
                 </div>
             </div>
-
-            <div class="footer-redes">
-                <img src="img/icon-facebook.svg" alt="Facebook">
+            <div class="footer-redes mt-4 mt-md-0">
+                <img src="img/icon-facebook.svg" alt="Facebook" class="me-3">
                 <img src="img/icon-twitter.svg" alt="Twitter">
             </div>
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
