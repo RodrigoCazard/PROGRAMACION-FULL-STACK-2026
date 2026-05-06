@@ -13,7 +13,6 @@ html, body {
 
 body {
   font-family: 'Rubik', sans-serif;
-  overflow-x: hidden; /* Evita scroll horizontal por los fondos */
 }
 
 .max-600 { 
@@ -156,14 +155,14 @@ body {
 
 @media (min-width: 768px) {
   .hero-img-container::after {
-      right: -10%; /* Lo acercamos más al borde para que no empuje la pantalla */
+      right: -10%;
       width: 100%;
       height: 70%;
-      border-radius: 150px 0 0 150px; /* Redondeado más pequeño para móviles */
+      border-radius: 150px 0 0 150px;
     }
 
     .feature-img-container::after {
-      left: -10%; /* Lo mismo para la forma de la izquierda */
+      left: -10%;
       width: 100%;
       height: 70%;
       border-radius: 0 150px 150px 0;
@@ -246,6 +245,42 @@ body {
 
 .accordion-button::after {
   filter: sepia(100%) hue-rotate(190deg) saturate(500%); /* Cambia el color de la flecha a azul */
+}
+
+/* Personalización del Modal */
+
+/* Para que el modal se vea por encima de todo */
+.modal {
+    z-index: 1060;
+}
+
+.modal .btn-azul {
+    padding: 10px;
+    font-weight: 500;
+}
+.modal-content {
+  border-radius: 20px;
+  background-color: #fff;
+}
+
+.filter-blue {
+  /* Esto cambia el logo a color azul si es un SVG */
+  filter: invert(41%) sepia(82%) saturate(601%) hue-rotate(192deg) brightness(92%) contrast(92%);
+}
+
+.modal-body h3 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 24px;
+}
+
+/* Animación suave al aparecer */
+.modal.fade .modal-dialog {
+  transform: scale(0.8);
+  transition: transform 0.3s ease-out;
+}
+
+.modal.show .modal-dialog {
+  transform: scale(1);
 }
 
 /* FOOTER */

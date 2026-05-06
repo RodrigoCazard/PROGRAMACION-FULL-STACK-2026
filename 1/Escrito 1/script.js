@@ -61,23 +61,31 @@ const emailInput = document.getElementById('emailInput');
 const errorContainer = emailInput.parentElement; // El div que envuelve al input
 
 form.addEventListener('submit', (e) => {
-    e.preventDefault(); // Evita que la página se recargue
+    e.preventDefault(); 
     
     const emailValue = emailInput.value.trim();
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Expresión regular para validar email
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
 
     if (!emailPattern.test(emailValue)) {
-        // Si el email es inválido, mostramos el error
+        // Si el email es inválido, mostramos el error rojo
         errorContainer.classList.add('input-error');
     } else {
-        // Si es válido, lo quitamos y podrías enviar los datos
+        // Si es válido, quitamos el error
         errorContainer.classList.remove('input-error');
-        alert('¡Gracias por contactarnos!');
-        emailInput.value = ''; // Limpiamos el campo
+
+        // --- LO QUE TIENES QUE CAMBIAR ESTÁ AQUÍ ---
+        // 1. Creamos el objeto del modal usando la librería de Bootstrap
+        const modalDeExito = new bootstrap.Modal(document.getElementById('successModal'));
+        
+        // 2. Lo mostramos en pantalla
+        modalDeExito.show();
+        
+        // 3. Limpiamos el input para que quede vacío
+        emailInput.value = ''; 
     }
 });
 
-// Opcional: Quitar el error mientras el usuario vuelve a escribir
+// Quitar el error mientras el usuario vuelve a escribir
 emailInput.addEventListener('input', () => {
     errorContainer.classList.remove('input-error');
 });

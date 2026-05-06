@@ -183,13 +183,29 @@
                         <!-- Contenedor para el input y el mensaje de error -->
                         <div class="input-group-container">
                             <input type="email" id="emailInput" class="form-control py-2" placeholder="Enter your email address">
-                            <span id="errorMessage" class="error-text">Whoops, make sure it's an email</span>
+                            <span id="errorMessage" class="error-text">Asegurate que sea una email válido.</span>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <button type="submit" class="btn btn-rojo w-100 py-2">Contact Us</button>
                     </div>
                 </form>
+            </div>
+
+            <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content border-0 shadow-lg">
+                        <div class="modal-body text-center p-5">
+                            <!-- Ícono decorativo -->
+                            <div class="icon-box mb-4">
+                                <img src="img/logo-bookmark.svg" alt="Success" class="filter-blue" style="width: 80px;">
+                            </div>
+                            <h3 class="fw-bold mb-3" style="color: var(--oscuro);">¡Te has unido con éxito!</h3>
+                            <p class="text-muted">Pronto recibirás nuestras últimas novedades sobre Bookmark directamente en tu correo.</p>
+                            <button type="button" class="btn btn-azul w-100 mt-4 py-2" data-bs-dismiss="modal">Genial, gracias</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
