@@ -1,0 +1,86 @@
+body{
+    background: linear-gradient(135deg, #dbeafe, #f8fafc);
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.titulo{
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #1e293b;
+    letter-spacing: 2px;
+}
+
+.panel{
+    border: none;
+    border-radius: 20px;
+    background-color: white;
+}
+
+.mensaje{
+    margin: 0;
+    color: #198754;
+    font-weight: bold;
+}
+
+/* BOTONES */
+
+.boton-juego{
+    padding: 12px 28px;
+    border-radius: 12px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.boton-juego:hover{
+    transform: translateY(-3px);
+}
+
+/* CARTA ? */
+
+.carta-signo{
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+}
+
+.signo-interrogacion{
+    font-size: 5rem;
+    color: white;
+    font-weight: bold;
+}
+
+/* CARTAS */
+
+.carta{
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.3s;
+    background-color: white;
+    cursor: pointer;
+}
+
+.carta:hover{
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.carta img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* RESPONSIVE */
+@media(max-width:576px){
+    .titulo{
+        font-size: 2.5rem;
+    }
+
+    .carta img{
+        height: 140px;
+    }
+}

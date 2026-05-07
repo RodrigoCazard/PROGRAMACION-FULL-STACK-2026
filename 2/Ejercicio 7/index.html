@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Memoria</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container py-5">
+        <!-- TÍTULO -->
+        <h1 class="titulo text-center mb-4">Juego de Memoria</h1>
+        <!-- PANEL SUPERIOR -->
+        <div class="row g-4 mb-5">
+            <!-- INTENTOS -->
+            <div class="col-md-4">
+                <div class="card panel shadow">
+                    <div class="card-body text-center">
+                        <h5 class="mb-3">Intentos</h5>
+                        <span class="badge bg-primary fs-4 px-4 py-2">0</span>
+                    </div>
+                </div>
+            </div>
+            <!-- PARES -->
+            <div class="col-md-4">
+                <div class="card panel shadow">
+                    <div class="card-body text-center">
+                        <h5 class="mb-3">Pares encontrados</h5>
+                        <span class="badge bg-success fs-4 px-4 py-2">0 / 10</span>
+                    </div>
+                </div>
+            </div>
+            <!-- MENSAJE -->
+            <div class="col-md-4">
+                <div class="card panel shadow">
+                    <div class="card-body text-center">
+                        <h5 class="mb-3">Estado</h5>
+                        <p class="mensaje">Encuentra todos los pares!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BOTONES -->
+        <div class="d-flex justify-content-center gap-3 mb-5 flex-wrap">
+            <button class="btn btn-primary boton-juego">
+                Empezar
+            </button>
+
+            <button class="btn btn-danger boton-juego">
+                Reiniciar
+            </button>
+
+            <button class="btn btn-dark boton-juego">
+                Terminar
+            </button>
+
+        </div>
+
+        <!-- CARTA EXTRA -->
+
+        <div class="row justify-content-center mb-5">
+            <div class="col-6 col-md-4 col-lg-3 col-xxl-2">
+                <div class="card carta shadow carta-signo">
+                    <div class="signo-interrogacion">
+                        ?
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TABLERO -->
+
+        <div class="row g-4 justify-content-center">
+
+            <!-- PAR 1 -->
+
+            <div class="col-6 col-md-4 col-lg-3 col-xxl-2">
+                <div class="card carta shadow" data-card="gato">
+                    <img src="img/gato.jpg" alt="Gato">
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3 col-xxl-2">
+                <div class="card carta shadow" data-card="gato">
+                    <img src="img/gato.jpg" alt="Gato">
+                </div>
+            </div>
+
+            <!-- PAR 2 -->
+
+            <div class="col-6 col-md-4 col-lg-3 col-xxl-2">
+                <div class="card carta shadow" data-card="perro">
+                    <img src="img/perro.jpg" alt="Perro">
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3 col-xxl-2">
+                <div class="card carta shadow" data-card="perro">
+                    <img src="img/perro.jpg" alt="Perro">
+                </div>
+            </div>
+
+            <!-- PAR 3 -->
+
+            <div class="col-6 col-md-4 col-lg-3 col-xxl-2">
+                <div class="card carta shadow" data-card="conejo">
+                    <img src="img/conejo.jpg" alt="Conejo">
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3 col-xxl-2">
+                <div class="card carta shadow" data-card="conejo">
+                    <img src="img/conejo.jpg" alt="Conejo">
+                </div>
+            </div>
+
+            <!-- PAR 4 -->
+
+            <div class="col-6 col-md-4 col-lg-3 col-xxl-2">
+                <div class="card carta shadow" data-card="oso">
+                    <img src="img/oso.jpg" alt="Oso">
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3 col-xxl-2">
+                <div class="card carta shadow" data-card="oso">
+                    <img src="img/oso.jpg" alt="Oso">
+                </div>
+            </div>
+
+            <!-- PAR 5 -->
+
+            <div class="col-6 col-md-4 col-lg-3 col-xxl-2">
+                <div class="card carta shadow" data-card="panda">
+                    <img src="img/panda.jpg" alt="Panda">
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3 col-xxl-2">
+                <div class="card carta shadow" data-card="panda">
+                    <img src="img/panda.jpg" alt="Panda">
+                </div>
+            </div>
+
+            <!-- PAR 6 -->
+
+            <div class="col-6 col-md-4 col-lg-3 col-xxl-2">
+                <div class="card carta shadow" data-card="zorro">
+                    <img src="img/zorro.jpg" alt="Zorro">
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3 col-xxl-2">
+                <div class="card carta shadow" data-card="zorro">
+                    <img src="img/zorro.jpg" alt="Zorro">
+                </div>
+            </div>
+
+            <!-- PAR 7 -->
+
+            <div class="col-6 col-md-4 col-lg-3 col-xxl-2">
+                <div class="card carta shadow" data-card="koala">
+                    <img src="img/koala.jpg" alt="Koala">
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3 col-xxl-2">
+                <div class="card carta shadow" data-card="koala">
+                    <img src="img/koala.jpg" alt="Koala">
+                </div>
+            </div>
+
+            <!-- PAR 8 -->
+
+            <div class="col-6 col-md-4 col-lg-3 col-xxl-2">
+                <div class="card carta shadow" data-card="tigre">
+                    <img src="img/tigre.jpg" alt="Tigre">
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3 col-xxl-2">
+                <div class="card carta shadow" data-card="tigre">
+                    <img src="img/tigre.jpg" alt="Tigre">
+                </div>
+            </div>
+
+            <!-- PAR 9 -->
+
+            <div class="col-6 col-md-4 col-lg-3 col-xxl-2">
+                <div class="card carta shadow" data-card="leon">
+                    <img src="img/leon.jpg" alt="León">
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3 col-xxl-2">
+                <div class="card carta shadow" data-card="leon">
+                    <img src="img/leon.jpg" alt="León">
+                </div>
+            </div>
+
+            <!-- PAR 10 -->
+
+            <div class="col-6 col-md-4 col-lg-3 col-xxl-2">
+                <div class="card carta shadow" data-card="mono">
+                    <img src="img/mono.jpg" alt="Mono">
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3 col-xxl-2">
+                <div class="card carta shadow" data-card="mono">
+                    <img src="img/mono.jpg" alt="Mono">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
