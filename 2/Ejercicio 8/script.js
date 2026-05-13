@@ -136,5 +136,6 @@ function victory() {
     execBtn.style.display = "none";
 }
 
+
 execBtn.addEventListener('click', validate);
 input.addEventListener('keypress', (e) => { if(e.key === 'Enter') validate(); });
