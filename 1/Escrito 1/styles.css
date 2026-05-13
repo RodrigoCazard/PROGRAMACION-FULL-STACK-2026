@@ -19,9 +19,59 @@ body {
   max-width: 600px; 
 }
 
+<<<<<<< HEAD
+.contenedor {
+  max-width: 1110px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.centrado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.texto-limitado {
+  max-width: 500px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: var(--gris);
+}
+
+/* HEADER */
+
+.header {
+  padding: 40px 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav { 
+  display: flex; 
+  gap: 40px; 
+  align-items: center; 
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 13px;
+  color: var(--oscuro);
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--rojo);
+=======
 .texto-limitado { 
   color: var(--gris); 
   margin-bottom: 25px; 
+>>>>>>> b29ef5061557c4417f7108afcb6d980d94c4119f
 }
 
 /* BOTONES */
@@ -76,8 +126,30 @@ body {
   box-shadow: 0 5px 15px rgba(0,0,0,0.4);
 }
 
+<<<<<<< HEAD
+/* MAIN */
+
+/* HERO */
+
+.hero {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  margin-top: 80px;
+  gap: 40px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  color: var(--oscuro);
+  margin-bottom: 20px;
+}
+
+.hero-img {
+=======
 /* FONDOS AZULES (Pseudo-elementos) */
 .hero-img-container, .feature-img-container {
+>>>>>>> b29ef5061557c4417f7108afcb6d980d94c4119f
   position: relative;
   z-index: 1;
 }
@@ -130,7 +202,47 @@ body {
   border-bottom: 4px solid var(--rojo);
 }
 
+<<<<<<< HEAD
+/* DETALLE FEATURE */
+.feature-detalles {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+.feature-detalles .imagen {
+  position: relative;
+}
+
+.feature-detalles .imagen::before {
+  content: "";
+  position: absolute;
+  left: -100px;
+  bottom: -60px;
+  width: 500px;
+  height: 350px;
+  background: var(--azul);
+  border-radius: 0 250px 250px 0;
+  z-index: -1;
+}
+
+/* DOWNLOAD */
+.download {
+  margin-top: 150px;
+}
+
+.fila {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  margin-top: 60px;
+}
+
+/* TARJETAS */
+=======
 /* TARJETAS DOWNLOAD */
+>>>>>>> b29ef5061557c4417f7108afcb6d980d94c4119f
 .tarjeta {
   background: white;
   padding: 40px 25px;
@@ -284,9 +396,15 @@ body {
 }
 
 /* FOOTER */
+<<<<<<< HEAD
+.footer {;
+  background: #1e2139;
+  padding: 30px 0;
+=======
 .footer { 
   background: var(--oscuro); 
   padding: 40px 0; 
+>>>>>>> b29ef5061557c4417f7108afcb6d980d94c4119f
 }
 
 .footer-links a { 
@@ -300,6 +418,134 @@ body {
   color: var(--rojo); 
 }
 
+<<<<<<< HEAD
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.footer-redes {
+  display: flex;
+  gap: 20px;
+  margin-left: 20px;
+  transition: 0.3s;
+}
+
+.footer-redes img:hover {
+  transform: scale(1.2);
+}
+
+/* Tablet */
+
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .feature-detalles {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .fila {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tarjeta {
+    width: 250px;
+  }
+
+  .t-1, .t-2, .t-3 {
+    margin-top: 0;
+  }
+}
+
+
+
+/* Celular */
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .feature-detalles {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .fila {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tarjeta {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .t-1, .t-2, .t-3 {
+    margin-top: 0;
+  }
+
+  .up-to-date form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .up-to-date input, .up-to-date button {
+    width: 100%;
+  }
+
+  .footer-contenido {
+    flex-direction: column;
+    gap: 20px;
+  }
+}  
+
+/* Celular chico */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  .features {
+    margin: 80px 0;
+  }
+
+  .preguntas {
+    margin: 80px auto;
+  }
+
+  .apartados {
+    flex-direction: column;
+    gap: 20px;
+  }
+=======
 .filter-white { 
   filter: brightness(0) invert(1); 
+>>>>>>> b29ef5061557c4417f7108afcb6d980d94c4119f
 }
